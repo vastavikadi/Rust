@@ -1,0 +1,5 @@
+.git
+
+# Windows build artifacts
+*.exe
+*.pdb
