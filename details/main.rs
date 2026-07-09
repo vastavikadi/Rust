@@ -30,4 +30,15 @@ let apples = 5;//now this cannot be changed until we mut keyword
 
 // When you build a project for the first time, Cargo figures out all the versions of the dependencies that fit the criteria and then writes them to the Cargo.lock file. When you build your project in the future, Cargo will see that the Cargo.lock file exists and will use the versions specified there rather than doing all the work of figuring out versions again. This lets you have a reproducible build automatically. In other words, your project will remain at 0.8.5 until you explicitly upgrade, thanks to the Cargo.lock file. Because the Cargo.lock file is important for reproducible builds, it’s often checked into source control with the rest of the code in your project.( lock file forces the cargo to only download the version specified in the lock leading to build the same way as the project owner did, with no dependency conflict - package-lock.json typa shit)
 
-//cargo update ignores the lock file and downloads the latest version of the crates based on the toml file
+// cargo update ignores the lock file and downloads the latest version of the crates based on the toml file
+
+
+// The Ordering type is another enum and has the variants Less, Greater, and Equal. These are the three outcomes that are possible when you compare two values.
+
+// The cmp method compares two values and can be called on anything that can be compared. It takes a reference to whatever you want to compare with: Here, it’s comparing guess to secret_number. Then, it returns a variant of the Ordering enum we brought into scope with the use statement (use std::cmp::Ordering). We use a match expression to decide what to do next based on which variant of Ordering was returned from the call to cmp with the values in guess and secret_number.
+
+// guess.trim().parse() : this takes the guess and then trim it to remove the whitespaces or any new line and then use parse method that converts string into other type, but we need to tell the type of the variable we want as we already did -> parse::<i32> and also when we assigned the type of the guessed_num.
+
+// parse also returns Result with Ok and Err variant that we handled not just used expect to crash the program
+
+// loop keyword used for creating infinite loop
